@@ -11,8 +11,9 @@ export default DS.Model.extend({
     // Combine name parts to create fullName
     let firstName = this.get('firstName');
     let lastName = this.get('lastName');
+    let middleInitial = this.get('middleInitial');
 
-    return firstName + ' ' + lastName;
+    return firstName + ' ' middleInitial + '. ' + lastName;
   }),
 
   temperatureInF: Ember.computed('temperatureInC', function(){
